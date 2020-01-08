@@ -1,15 +1,16 @@
 const express = require('express')
+const mongoose = require('mongoose')
+
 
 // Está função cria um servidor que é acessador pelo navegador. 
 const app = express();
 
-//app.get é uma Rota. toda função que tem req e res é um middle 
-//middle é um interceptador de chamada de requisições.
-app.get('/', (req, res) => {
-	// Eviando uma resposta
-    return res.send(`Ola ${req.query.name}`);
-});
+// Coneção com banco mongoose
+mongoose.connect('mongodb+srv://admin:admin@cluster0-c12ry.mongodb.net/test?retryWrites=true&w=majority', {
+	useNewUrlParser: true,
+})
 
+app.use(require('./routes'));
 
 // Porta, que o navegador vai acessar.
 app.listen(80);
