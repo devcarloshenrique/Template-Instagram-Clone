@@ -1,0 +1,23 @@
+	|Programas que devem está instalados previamente|
+
+		1 -> Node
+		2 -> Yarn
+
+
+1 -- Criando repositorio com yarn 
+
+	|yarn init -y|
+
+2 -- Instalando express com yarn
+
+	|yarn add express|
+
+3 -- Instalando nodemon com yarn
+
+	Esse " -D " veio de ambiente de desenvolvimento.
+
+	|yarn add nodemon -D|
+ 
+4 -- Recriando pasta node_modules
+
+	|npm init| 
