@@ -1,13 +1,19 @@
 const express = require('express');
+const multer = require('multer');
+const uploadConfig = require('./config/upload');
+const PostController = require('./controllers/PostControllers');
+const LikeController = require('./controllers/LikeController');
 
 const routes = new express.Router();
+const upload = multer(uploadConfig);
 
-//routes.get é uma Rota. toda função que tem req e res é um middle 
-//middle é um interceptador de chamada de requisições.
-routes.get('/', (req, res) => {
-		// Eviando uma resposta
-    return res.send(`Ola ${req.query.name}`);
-})
+// Lista todos os dados 
+routes.get('/posts',PostController.index);
 
+// a configuração do multer permite queo express entenda o corpo enviado pelo insonia no formato multipart form data
+routes.post('/posts', upload.single('image'),PostController.store); 
 
-module.exports = routes;
+// Adiciona likes 
+routes.post('/posts/:id/like', LikeController.store)
+
+module.exports = routes; 
