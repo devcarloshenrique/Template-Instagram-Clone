@@ -1,0 +1,58 @@
+	|Programas que devem está instalados previamente|
+
+		1 -> Node
+		2 -> Yarn
+
+
+1 -- Criando repositorio com yarn 
+
+	|yarn init -y|
+
+2 -- Instalando express com yarn
+
+	|yarn add express|
+
+3 -- Instalando nodemon com yarn
+
+	Esse " -D " veio de ambiente de desenvolvimento.
+
+	|yarn add nodemon -D|
+ 
+4 -- Recriando pasta node_modules
+
+	|npm init| 
+
+5 -- Criar usuario no site "Mongo atlas"
+
+	5.1 -> Criar o Cluester
+
+	5.2 -> Instalar nova dependência do "Mongo"
+	
+		-> biblioteca utilizada para importar e manipular base de dados criadas através do mongo.
+
+		|yarn add mongoose|
+
+6 -- Instalando mais uma depedência para trabalhar com "multiparte form data".
+
+	6.1 instalando multer
+
+	-> É uma biblioteca que lida com esses formularios em multiparte form data, e automatiza o processo de upload de arquivo
+dentro do nosso backend.
+		|yarn add multer|
+
+7 -- Instalando mais uma depedência para manipular imagens
+
+	|yarn add sharp|
+
+8 -- Instalando mais uma depedência cors, vai possibilitar que o backend esteja acessivel pelo frontend em reat mesmo estando
+em dominios diferentes.
+
+	|yarn add cors|
+
+9 -- Como o protocolo web socket por padrão ele não é processado pelo node, será necessário instalar uma biblioteca 
+socket.io
+
+	|yarn add socket.io|
+
+
+29:40
