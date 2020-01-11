@@ -54,5 +54,14 @@ socket.io
 
 	|yarn add socket.io|
 
+10 -- Criando Pasta frontend
+
+	|yarn create react-app frontend|
+
+11 -- Modulo para trabalhar rotas no react 
+
+	|yarn add react-router-dom|
+
+31:55
 
 29:40
