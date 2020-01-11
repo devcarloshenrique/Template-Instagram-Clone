@@ -36,7 +36,7 @@ module.exports = {
 			place,
 			description,
 			hashtags,
-			fileName
+			image: fileName,
 		});
 
 		// Enviar uma informação em tempo real por meio do |io| do tipo post com todos os dados do |post|
